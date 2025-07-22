@@ -1,0 +1,1651 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Aptos', sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 2rem;
+}
+
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.1) 0%,
+    rgba(255, 182, 193, 0.1) 25%,
+    rgba(221, 160, 221, 0.1) 50%,
+    rgba(173, 216, 230, 0.1) 75%,
+    rgba(255, 182, 193, 0.1) 100%
+  );
+  background-size: 200px 200px;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.company-name {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.1rem;
+}
+
+.primary-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #24ABC6;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+
+.secondary-name {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #24ABC6;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.designation {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #0D70A2;
+  /* margin-top: 0.5rem; */
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #414042;
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-section {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.1rem;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #24ABC6;
+  letter-spacing: 1px;
+}
+
+.logo-swoosh {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 30px;
+  height: 20px;
+  background: linear-gradient(45deg, #FF6B35, #4ECDC4, #9B59B6);
+  border-radius: 50px;
+  transform: rotate(45deg);
+}
+
+.logo-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #24ABC6;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.footer-info {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #666666;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Professional Document Styles */
+.document-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 2rem;
+  background-color: #ffffff;
+  position: relative;
+  /* min-height: 100vh; */
+}
+
+.header-line {
+  width: 100%;
+  height: 0px;
+  background-color: transparent;
+  margin-bottom: 0rem;
+}
+
+.document-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.content-section {
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24ABC6;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.5px;
+}
+
+.section-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.3;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.2px;
+}
+
+.values-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.value-item {
+  display: grid;
+  align-items: flex-start;
+  gap: 0.05rem;
+}
+
+.value-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0D70A2;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.value-description {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.document-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.5px;
+}
+
+/* Background pattern for document */
+.document-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Practice Areas Styles */
+.practice-areas-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.practice-areas-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.practice-areas-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #24ABC6;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-align: start;
+}
+
+.practice-areas-grid {  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.practice-area-section {
+  margin-bottom: 0.5rem;
+}
+
+.practice-area-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24ABC6;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.section-letter {
+  color: #24ABC6;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.practice-area-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practice-area-list li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.05rem;
+  letter-spacing: 0.1px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.practice-area-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.practice-areas-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for practice areas */
+.practice-areas-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Human Capital & Leadership Team Styles */
+.human-capital-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.human-capital-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.human-capital-section {
+  margin-bottom: 2.5rem;
+}
+
+.leadership-team-section {
+  margin-bottom: 2rem;
+}
+
+.partner-profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.partner-profile {
+  margin-bottom: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0px solid #e0e0e0;
+}
+
+.partner-profile:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.partner-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.partner-role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #0D70A2;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.partner-position {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+.specialization-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0D70A2;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.specialization-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.specialization-list li {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.3px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.specialization-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #24ABC6;
+  font-weight: bold;
+}
+
+.human-capital-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for human capital */
+.human-capital-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Additional Leadership Team Styles */
+.leadership-team-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.leadership-team-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.leadership-team-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for leadership team */
+.leadership-team-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Chartered Accountants Styles */
+.chartered-accountants-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 2rem;
+  background-color: #ffffff;
+  position: relative;
+  /* min-height: 100vh; */
+}
+
+.chartered-accountants-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.chartered-accountants-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-align: start;
+}
+
+.ca-profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ca-profile {
+  margin-bottom: 0rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0px solid #e0e0e0;
+}
+
+.ca-profile:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.ca-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.ca-role {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #0D70A2;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3px;
+}
+
+.ca-expertise { 
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+.ca-expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ca-expertise-list li {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.1px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ca-expertise-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #24ABC6;
+  font-weight: bold;
+}
+
+.chartered-accountants-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for chartered accountants */
+.chartered-accountants-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Representative List of Clients Styles */
+.clients-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.clients-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.clients-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-align: start;
+}
+
+.client-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.client-section {
+  margin-bottom: 1rem;
+}
+
+.client-section-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.client-subheading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.client-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.client-list li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.3px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.client-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.client-description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+.clients-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for clients */
+.clients-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Portfolio Section Styles */
+.portfolio-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.portfolio-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.portfolio-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.portfolio-section {
+  margin-bottom: 0rem;
+}
+
+.portfolio-section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-list li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.1px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.portfolio-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.portfolio-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for portfolio */
+.portfolio-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Additional Clients Section Styles */
+.additional-clients-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.additional-clients-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.additional-clients-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.additional-clients-section {
+  margin-bottom: 0rem;
+}
+
+.additional-clients-section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.additional-clients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.additional-clients-list li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.2px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.additional-clients-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.additional-clients-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for additional clients */
+.additional-clients-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Internal Audit & Special Assignments Section Styles */
+.internal-audit-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 2rem;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+}
+
+.internal-audit-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.internal-audit-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.internal-audit-section {
+  margin-bottom: 2rem;
+}
+
+.internal-audit-section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #24ABC6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.internal-audit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.internal-audit-list li {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.2px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.internal-audit-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.internal-audit-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for internal audit */
+.internal-audit-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Certifications & Legacy Section Styles */
+.certifications-legacy-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 2rem;
+  background-color: #ffffff;
+  position: relative;
+  /* min-height: 100vh; */
+}
+
+.certifications-legacy-content {
+  max-width: 450px;
+  /* margin: 0 auto; */
+  text-align: left;
+}
+
+.certifications-legacy-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.certifications-legacy-section {
+  margin-bottom: 0rem;
+}
+
+.certifications-legacy-section-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #24ABC6;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.certifications-legacy-content-box {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.certifications-legacy-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.certifications-legacy-text:last-child {
+  margin-bottom: 0;
+}
+
+.certifications-legacy-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Background pattern for certifications & legacy */
+.certifications-legacy-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.05) 0%,
+    rgba(255, 182, 193, 0.05) 25%,
+    rgba(221, 160, 221, 0.05) 50%,
+    rgba(173, 216, 230, 0.05) 75%,
+    rgba(255, 182, 193, 0.05) 100%
+  );
+  background-size: 150px 150px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Contact Section with Background Image */
+.contact-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  background-image: url('assets/BG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 60vh;
+}
+
+.contact-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.contact-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-section {
+  margin-bottom: 2rem;
+}
+
+.contact-section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  /* margin-bottom: 1rem; */
+  letter-spacing: 0.5px;
+}
+
+.contact-address {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  /* margin-bottom: 0.5rem; */
+  letter-spacing: 0.3px;
+}
+
+.contact-phone {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  /* margin-bottom: 0.5rem; */
+  letter-spacing: 0.3px;
+}
+
+.contact-email {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  /* margin-bottom: 0.5rem; */
+  letter-spacing: 0.3px;
+}
+
+.contact-website {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.4;
+  /* margin-bottom: 0.5rem; */  
+  letter-spacing: 0.3px;
+}
+
+/* Background pattern for contact */
+.contact-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(173, 216, 230, 0.1) 0%,
+    rgba(255, 182, 193, 0.1) 25%,
+    rgba(221, 160, 221, 0.1) 50%,
+    rgba(173, 216, 230, 0.1) 75%,
+    rgba(255, 182, 193, 0.1) 100%
+  );
+  background-size: 200px 200px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Background Image Styles */
+.bg-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.bg-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .primary-name {
+    font-size: 2.5rem;
+  }
+  
+  .secondary-name {
+    font-size: 2rem;
+  }
+  
+  .designation {
+    font-size: 1.4rem;
+  }
+  
+  .footer-section {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+  }
+  
+  .logo-swoosh {
+    width: 25px;
+    height: 15px;
+    top: -8px;
+    right: -12px;
+  }
+
+  .document-container {
+    padding: 1.5rem;
+  }
+
+  .document-content {
+    max-width: 100%;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+  }
+
+  .value-title {
+    min-width: 100px;
+    font-size: 0.95rem;
+  }
+
+  .value-description {
+    font-size: 0.95rem;
+  }
+
+  .practice-areas-container {
+    padding: 1.5rem;
+  }
+
+  .practice-areas-title {
+    font-size: 2rem;
+  }
+
+  .practice-areas-grid {
+    grid-template-columns: 1fr;
+    /* gap: 1.5rem; */
+  }
+
+  .practice-area-heading {
+    font-size: 1.2rem;
+  }
+
+  .practice-area-list li {
+    font-size: 0.9rem;
+  }
+
+  .human-capital-container {
+    padding: 1.5rem;
+  }
+
+  .partner-name {
+    font-size: 1.1rem;
+  }
+
+  .partner-role {
+    font-size: 0.9rem;
+  }
+
+  .specialization-title {
+    font-size: 0.95rem;
+  }
+
+  .specialization-list li {
+    font-size: 0.85rem;
+  }
+
+  .leadership-team-container {
+    padding: 1.5rem;
+  }
+
+  .chartered-accountants-container {
+    padding: 1.5rem;
+  }
+
+  .chartered-accountants-title {
+    font-size: 2rem;
+  }
+
+  .ca-name {
+    font-size: 1.1rem;
+  }
+
+  .ca-role {
+    font-size: 0.9rem;
+  }
+
+  .ca-expertise {
+    font-size: 0.9rem;
+  }
+
+  .ca-expertise-list li {
+    font-size: 0.85rem;
+  }
+
+  .clients-container {
+    padding: 1.5rem;
+  }
+
+  .clients-title {
+    font-size: 2rem;
+  }
+
+  .client-section-heading {
+    font-size: 1.2rem;
+  }
+
+  .client-subheading {
+    font-size: 0.95rem;
+  }
+
+  .client-list li {
+    font-size: 0.85rem;
+  }
+
+  .client-description {
+    font-size: 0.85rem;
+  }
+
+  .portfolio-container {
+    padding: 1.5rem;
+  }
+
+  .portfolio-section-heading {
+    font-size: 1.2rem;
+  }
+
+  .portfolio-list li {
+    font-size: 0.85rem;
+  }
+
+  .additional-clients-container {
+    padding: 1.5rem;
+  }
+
+  .additional-clients-section-heading {
+    font-size: 1.2rem;
+  }
+
+  .additional-clients-list li {
+    font-size: 0.85rem;
+  }
+
+  .internal-audit-container {
+    padding: 1.5rem;
+  }
+
+  .internal-audit-section-heading {
+    font-size: 1.2rem;
+  }
+
+  .internal-audit-list li {
+    font-size: 0.85rem;
+  }
+
+  .certifications-legacy-container {
+    padding: 1.5rem;
+  }
+
+  .certifications-legacy-section-heading {
+    font-size: 1.2rem;
+  }
+
+  .certifications-legacy-content-box {
+    padding: 1.2rem;
+  }
+
+  .certifications-legacy-text {
+    font-size: 0.9rem;
+  }
+
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .contact-section-heading {
+    font-size: 1.2rem;
+  }
+
+  .contact-address,
+  .contact-phone,
+  .contact-email,
+  .contact-website {
+    font-size: 0.9rem;
+  }
+
+  .bg-image-container {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .primary-name {
+    font-size: 2rem;
+  }
+  
+  .secondary-name {
+    font-size: 1.6rem;
+  }
+  
+  .designation {
+    font-size: 1.2rem;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .document-container {
+    padding: 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.2rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+
+  .value-item {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .value-title {
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+
+  .value-description {
+    font-size: 0.9rem;
+    margin-left: 1rem;
+  }
+
+  .practice-areas-container {
+    padding: 1rem;
+  }
+
+  .practice-areas-title {
+    font-size: 1.8rem;
+  }
+
+  .practice-area-heading {
+    font-size: 1.1rem;
+  }
+
+  .practice-area-list li {
+    font-size: 0.85rem;
+  }
+
+  .human-capital-container {
+    padding: 1rem;
+  }
+
+  .partner-name {
+    font-size: 1rem;
+  }
+
+  .partner-role {
+    font-size: 0.85rem;
+  }
+
+  .partner-position {
+    font-size: 0.8rem;
+  }
+
+  .specialization-title {
+    font-size: 0.9rem;
+  }
+
+  .specialization-list li {
+    font-size: 0.8rem;
+  }
+
+  .leadership-team-container {
+    padding: 1rem;
+  }
+
+  .chartered-accountants-container {
+    padding: 1rem;
+  }
+
+  .chartered-accountants-title {
+    font-size: 1.8rem;
+  }
+
+  .ca-name {
+    font-size: 1rem;
+  }
+
+  .ca-role {
+    font-size: 0.85rem;
+  }
+
+  .ca-expertise {
+    font-size: 0.85rem;
+  }
+
+  .ca-expertise-list li {
+    font-size: 0.8rem;
+  }
+
+  .clients-container {
+    padding: 1rem;
+  }
+
+  .clients-title {
+    font-size: 1.8rem;
+  }
+
+  .client-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .client-subheading {
+    font-size: 0.9rem;
+  }
+
+  .client-list li {
+    font-size: 0.8rem;
+  }
+
+  .client-description {
+    font-size: 0.8rem;
+  }
+
+  .portfolio-container {
+    padding: 1rem;
+  }
+
+  .portfolio-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-list li {
+    font-size: 0.8rem;
+  }
+
+  .additional-clients-container {
+    padding: 1rem;
+  }
+
+  .additional-clients-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .additional-clients-list li {
+    font-size: 0.8rem;
+  }
+
+  .internal-audit-container {
+    padding: 1rem;
+  }
+
+  .internal-audit-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .internal-audit-list li {
+    font-size: 0.8rem;
+  }
+
+  .certifications-legacy-container {
+    padding: 1rem;
+  }
+
+  .certifications-legacy-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .certifications-legacy-content-box {
+    padding: 1rem;
+  }
+
+  .certifications-legacy-text {
+    font-size: 0.85rem;
+  }
+
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .contact-address,
+  .contact-phone,
+  .contact-email,
+  .contact-website {
+    font-size: 0.85rem;
+  }
+
+  .bg-image-container {
+    margin-top: 1rem;
+  }
+}
+
+.contact-footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
